@@ -75,3 +75,75 @@ describe('flags warnings with invalid css', () => {
 		expect(result.results[0].warnings[0].column).toBe(15);
 	});
 });
+
+describe('flags no warnings with valid scss', () => {
+	const validScss = fs.readFileSync('./__tests__/valid.scss', 'utf-8');
+	let result;
+
+	beforeEach(async () => {
+		result = await stylelint.lint({
+			code: validScss,
+			config,
+		});
+	});
+
+	it('did not error', () => {
+		expect(result.errored).toBe(false);
+	});
+
+	it('flags no warnings', () => {
+		expect(result.results[0].warnings).toHaveLength(0);
+	});
+});
+
+describe('flags warnings with invalid scss', () => {
+	const invalidScss = fs.readFileSync('./__tests__/invalid.scss', 'utf-8');
+	let result;
+
+	beforeEach(async () => {
+		result = await stylelint.lint({
+			code: invalidScss,
+			config,
+		});
+	});
+
+	it('did error', () => {
+		expect(result.errored).toBe(true);
+	});
+
+	it('flags warnings', () => {
+		expect(result.results[0].warnings).toHaveLength(5);
+	});
+
+	it('correct warning text', () => {
+		expect(result.results[0].warnings.map((w) => w.text)).toEqual([
+			'Expected custom media query name "--FOO" to be kebab-case',
+			'Expected custom property name "--FOO" to be kebab-case',
+			'Expected keyframe name "FOO" to be kebab-case',
+			'Expected class selector ".FOO" to match BEM CSS pattern https://en.bem.info/methodology/css. Selector validation tool: https://regexr.com/3apms',
+			'Expected id selector "#FOO" to be kebab-case',
+		]);
+	});
+
+	it('correct rule flagged', () => {
+		expect(result.results[0].warnings.map((w) => w.rule)).toEqual([
+			'custom-media-pattern',
+			'custom-property-pattern',
+			'keyframes-name-pattern',
+			'selector-class-pattern',
+			'selector-id-pattern',
+		]);
+	});
+
+	it('correct severity flagged', () => {
+		expect(result.results[0].warnings[0].severity).toBe('error');
+	});
+
+	it('correct line number', () => {
+		expect(result.results[0].warnings[0].line).toBe(5);
+	});
+
+	it('correct column number', () => {
+		expect(result.results[0].warnings[0].column).toBe(15);
+	});
+});
