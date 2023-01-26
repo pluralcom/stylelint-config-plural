@@ -4,7 +4,11 @@
 
 [![npm version](https://badge.fury.io/js/stylelint-config-plural.svg)](https://badge.fury.io/js/stylelint-config-plural) [![Test Release Publish](https://github.com/pluralcom/stylelint-config-plural/actions/workflows/test-publish.yml/badge.svg)](https://github.com/pluralcom/stylelint-config-plural/actions/workflows/test-publish.yml)
 
-Extends [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard).
+Extends:
+
+- [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard).
+- [`stylelint-config-standard-scss`](https://github.com/stylelint/stylelint-config-standard-scss).
+- [`stylelint-config-prettier`](https://github.com/stylelint/stylelint-config-prettier).
 
 Turns on additional rules to enforce common conventions found in the specifications and in a handful of CSS styleguides, including: [The Idiomatic CSS Principles](https://github.com/necolas/idiomatic-css),
 [Google's CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#CSS_Formatting_Rules), [Airbnb's Styleguide](https://github.com/airbnb/css#css), and [@mdo's Code Guide](https://codeguide.co/#css).
@@ -17,8 +21,8 @@ To see the rules that this config uses, please read the [config itself](./index.
 
 <!-- prettier-ignore -->
 ```css
-@import url("x.css");
-@import url("y.css");
+@import "x";
+@import "y";
 
 /**
  * Multi-line comment
@@ -103,7 +107,7 @@ _Note: the config is tested against this example, as such the example contains p
 ## Installation
 
 ```bash
-npm install stylelint-config-standard --save-dev
+npm install stylelint-config-plural --save-dev
 ```
 
 ## Usage
@@ -112,7 +116,7 @@ Set your stylelint config to:
 
 ```json
 {
-  "extends": "stylelint-config-standard"
+  "extends": "stylelint-config-plural"
 }
 ```
 
@@ -124,7 +128,7 @@ You can turn off rules by setting its value to `null`. For example:
 
 ```json
 {
-  "extends": "stylelint-config-standard",
+  "extends": "stylelint-config-plural",
   "rules": {
     "selector-class-pattern": null
   }
@@ -135,7 +139,7 @@ Or lower the severity of a rule to a warning using the `severity` secondary opti
 
 ```json
 {
-  "extends": "stylelint-config-standard",
+  "extends": "stylelint-config-plural",
   "rules": {
     "property-no-vendor-prefix": [
       true,
@@ -151,7 +155,7 @@ A more complete example, to change the `at-rule-no-unknown` rule to use its `ign
 
 ```json
 {
-  "extends": "stylelint-config-standard",
+  "extends": "stylelint-config-plural",
   "rules": {
     "at-rule-no-unknown": [
       true,
