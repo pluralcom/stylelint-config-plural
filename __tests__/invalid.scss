@@ -10,4 +10,10 @@ a {
 
 .FOO { /* ... */ }
 
+.bem {
+  &__not_bem {
+    display: none;
+  }
+}
+
 #FOO { /* ... */ }

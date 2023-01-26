@@ -112,7 +112,7 @@ describe('flags warnings with invalid scss', () => {
 	});
 
 	it('flags warnings', () => {
-		expect(result.results[0].warnings).toHaveLength(5);
+		expect(result.results[0].warnings).toHaveLength(6);
 	});
 
 	it('correct warning text', () => {
@@ -121,6 +121,7 @@ describe('flags warnings with invalid scss', () => {
 			'Expected custom property name "--FOO" to be kebab-case',
 			'Expected keyframe name "FOO" to be kebab-case',
 			'Expected class selector ".FOO" to match BEM CSS pattern https://en.bem.info/methodology/css. Selector validation tool: https://regexr.com/3apms',
+			'Expected class selector ".bem__not_bem" to match BEM CSS pattern https://en.bem.info/methodology/css. Selector validation tool: https://regexr.com/3apms',
 			'Expected id selector "#FOO" to be kebab-case',
 		]);
 	});
@@ -130,6 +131,7 @@ describe('flags warnings with invalid scss', () => {
 			'custom-media-pattern',
 			'custom-property-pattern',
 			'keyframes-name-pattern',
+			'selector-class-pattern',
 			'selector-class-pattern',
 			'selector-id-pattern',
 		]);

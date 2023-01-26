@@ -6,3 +6,9 @@ $color-black: #000000;
 .bem-css__classname {
 	display: none;
 }
+
+.bem2 {
+  &__classname2 {
+    color: $color-black;
+  }
+}
