@@ -2,7 +2,7 @@
 
 🎨 How plural paints its styles.
 
-[![npm version](https://badge.fury.io/js/stylelint-config-plural.svg)](https://badge.fury.io/js/stylelint-config-plural) [![Test Release Publish](https://github.com/pluralcom/stylelint-config-plural/actions/workflows/test-publish.yml/badge.svg)](https://github.com/pluralcom/stylelint-config-plural/actions/workflows/test-publish.yml)> The standard shareable config for Stylelint.
+[![npm version](https://badge.fury.io/js/stylelint-config-plural.svg)](https://badge.fury.io/js/stylelint-config-plural) [![Test Release Publish](https://github.com/pluralcom/stylelint-config-plural/actions/workflows/test-publish.yml/badge.svg)](https://github.com/pluralcom/stylelint-config-plural/actions/workflows/test-publish.yml)
 
 Extends [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard).
 
@@ -187,7 +187,3 @@ You can make sure this module lints with itself using `npm run lint`.
 <hr>
 
 This Package is being maintained by [plural](https://plural.com)
-
-Built with ❤️ in California
-
-# };
