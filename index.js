@@ -1,5 +1,7 @@
 'use strict';
 
+const propertyOrder = require('./rules/property-order');
+
 /** Root Stylelint configuration */
 module.exports = {
 	extends: [
@@ -7,6 +9,7 @@ module.exports = {
 		'stylelint-config-standard-scss',
 		'stylelint-config-prettier',
 	],
+	plugins: ['stylelint-order'],
 	/**
 	 * Global Rules
 	 *
@@ -17,6 +20,8 @@ module.exports = {
 		/* CSS */
 		/** use long to match JS */
 		'color-hex-length': 'long',
+		/** properties order */
+		'order/properties-order': propertyOrder,
 		/** allow us to go as precise as needed */
 		'number-max-precision': null,
 		/** eg: composes - scss */

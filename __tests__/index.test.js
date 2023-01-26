@@ -41,11 +41,12 @@ describe('css', () => {
 		});
 
 		it('flags warnings', () => {
-			expect(result.results[0].warnings).toHaveLength(5);
+			expect(result.results[0].warnings).toHaveLength(6);
 		});
 
 		it('correct warning text', () => {
 			expect(result.results[0].warnings.map((w) => w.text)).toEqual([
+				'Expected "color" to come before "background-color" (order/properties-order)',
 				'Expected custom media query name "--FOO" to be kebab-case',
 				'Expected custom property name "--FOO" to be kebab-case',
 				'Expected keyframe name "FOO" to be kebab-case',
@@ -56,6 +57,7 @@ describe('css', () => {
 
 		it('correct rule flagged', () => {
 			expect(result.results[0].warnings.map((w) => w.rule)).toEqual([
+				'order/properties-order',
 				'custom-media-pattern',
 				'custom-property-pattern',
 				'keyframes-name-pattern',
@@ -69,11 +71,11 @@ describe('css', () => {
 		});
 
 		it('correct line number', () => {
-			expect(result.results[0].warnings[0].line).toBe(5);
+			expect(result.results[0].warnings[0].line).toBe(17);
 		});
 
 		it('correct column number', () => {
-			expect(result.results[0].warnings[0].column).toBe(15);
+			expect(result.results[0].warnings[0].column).toBe(3);
 		});
 	});
 });
@@ -115,11 +117,12 @@ describe('scss', () => {
 		});
 
 		it('flags warnings', () => {
-			expect(result.results[0].warnings).toHaveLength(6);
+			expect(result.results[0].warnings).toHaveLength(7);
 		});
 
 		it('correct warning text', () => {
 			expect(result.results[0].warnings.map((w) => w.text)).toEqual([
+				'Expected "color" to come before "background-color" (order/properties-order)',
 				'Expected custom media query name "--FOO" to be kebab-case',
 				'Expected custom property name "--FOO" to be kebab-case',
 				'Expected keyframe name "FOO" to be kebab-case',
@@ -131,6 +134,7 @@ describe('scss', () => {
 
 		it('correct rule flagged', () => {
 			expect(result.results[0].warnings.map((w) => w.rule)).toEqual([
+				'order/properties-order',
 				'custom-media-pattern',
 				'custom-property-pattern',
 				'keyframes-name-pattern',
@@ -145,11 +149,11 @@ describe('scss', () => {
 		});
 
 		it('correct line number', () => {
-			expect(result.results[0].warnings[0].line).toBe(5);
+			expect(result.results[0].warnings[0].line).toBe(23);
 		});
 
 		it('correct column number', () => {
-			expect(result.results[0].warnings[0].column).toBe(15);
+			expect(result.results[0].warnings[0].column).toBe(3);
 		});
 	});
 });
