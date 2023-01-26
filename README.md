@@ -10,8 +10,7 @@ Extends:
 - [`stylelint-config-standard-scss`](https://github.com/stylelint/stylelint-config-standard-scss).
 - [`stylelint-config-prettier`](https://github.com/stylelint/stylelint-config-prettier).
 
-Turns on additional rules to enforce common conventions found in the specifications and in a handful of CSS styleguides, including: [The Idiomatic CSS Principles](https://github.com/necolas/idiomatic-css),
-[Google's CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#CSS_Formatting_Rules), [Airbnb's Styleguide](https://github.com/airbnb/css#css), and [@mdo's Code Guide](https://codeguide.co/#css).
+Turns on additional rules to enforce common conventions found in the specifications and in a handful of CSS styleguides, including: [BEM CSS](https://en.bem.info/methodology/css).
 
 It favors flexibility over strictness for things like multi-line lists and single-line rulesets.
 
