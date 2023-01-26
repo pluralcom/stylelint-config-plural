@@ -1,6 +1,7 @@
 /** properties order */
 module.exports = [
 	'@extend',
+	'composes',
 	'all',
 	'position',
 	'top',
