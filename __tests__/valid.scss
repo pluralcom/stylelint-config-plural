@@ -8,6 +8,8 @@ $color-black: #000000;
 }
 
 .bem2 {
+  @extend .bem-css__classname;
+
   &__classname2 {
     color: $color-black;
   }
