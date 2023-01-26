@@ -58,7 +58,11 @@
     "extends": [
       "stylelint"
     ],
+    "rules": {
+      "func-name-matching": "off"
+    },
     "globals": {
+      "expected": true,
       "module": true,
       "require": true
     }

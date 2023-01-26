@@ -1,5 +1,5 @@
-@import url("x.css");
-@import url("y.css");
+@import "x";
+@import "y";
 
 /**
  * Multi-line comment
@@ -12,7 +12,7 @@
 .selector-1,
 .selector-2,
 .selector-3[type="text"] {
-  background: linear-gradient(#fff, rgb(0 0 0 / 80%));
+  background: linear-gradient(#ffffff, rgb(0 0 0 / 80%));
   box-sizing: border-box;
   display: block;
   color: var(--brand-red);
@@ -54,15 +54,15 @@
       repeating-linear-gradient(
         -45deg,
         transparent,
-        #fff 25px,
+        #ffffff 25px,
         rgb(255 255 255 / 100%) 50px
       );
     margin: 10px;
     margin-bottom: 5px;
     box-shadow:
-      0 1px 1px #000,
-      0 1px 0 #fff,
-      2px 2px 1px 1px #ccc inset;
+      0 1px 1px #000000,
+      0 1px 0 #ffffff,
+      2px 2px 1px 1px #cccccc inset;
     height: 10rem;
   }
 
