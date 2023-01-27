@@ -106,7 +106,13 @@ _Note: the config is tested against this example, as such the example contains p
 ## Installation
 
 ```bash
-npm install stylelint-config-plural --save-dev
+npm install --save-dev stylelint-config-plural stylelint-config-prettier stylelint-config-standard stylelint-config-standard-scss stylelint-high-performance-animation stylelint-images stylelint-order
+```
+
+OR
+
+```bash
+yarn add -D stylelint-config-plural stylelint-config-prettier stylelint-config-standard stylelint-config-standard-scss stylelint-high-performance-animation stylelint-images stylelint-order
 ```
 
 ## Usage
