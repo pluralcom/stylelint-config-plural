@@ -13,6 +13,7 @@
 .selector-3[type="text"] {
   display: block;
   box-sizing: border-box;
+  padding: 1px;
   color: var(--brand-red);
   background: linear-gradient(#ffffff, rgb(0 0 0 / 80%));
 }
