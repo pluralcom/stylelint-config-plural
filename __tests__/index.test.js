@@ -119,13 +119,14 @@ describe('scss', () => {
 		});
 
 		it('flags warnings', () => {
-			expect(result.results[0].warnings).toHaveLength(8);
+			expect(result.results[0].warnings).toHaveLength(9);
 		});
 
 		it('correct warning text', () => {
 			expect(result.results[0].warnings.map((w) => w.text)).toEqual([
 				'Expected "color" to come before "background-color" (order/properties-order)',
 				'Invalid `width: 10px`. Pixel values should be divisible by 4. (plugin/8-point-grid)',
+				'Invalid `width: 0.1rem`. Rem values should be divisible by 0.25. (plugin/8-point-grid)',
 				'Expected custom media query name "--FOO" to be kebab-case',
 				'Expected custom property name "--FOO" to be kebab-case',
 				'Expected keyframe name "FOO" to be kebab-case',
@@ -138,6 +139,7 @@ describe('scss', () => {
 		it('correct rule flagged', () => {
 			expect(result.results[0].warnings.map((w) => w.rule)).toEqual([
 				'order/properties-order',
+				'plugin/8-point-grid',
 				'plugin/8-point-grid',
 				'custom-media-pattern',
 				'custom-property-pattern',
@@ -153,7 +155,7 @@ describe('scss', () => {
 		});
 
 		it('correct line number', () => {
-			expect(result.results[0].warnings[0].line).toBe(27);
+			expect(result.results[0].warnings[0].line).toBe(31);
 		});
 
 		it('correct column number', () => {

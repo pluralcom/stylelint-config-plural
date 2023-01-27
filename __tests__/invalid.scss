@@ -6,6 +6,10 @@ a {
   width: 10px;
 }
 
+.size-rem {
+  width: 0.1rem;
+}
+
 @custom-media --FOO;
 
 :root { --FOO: 1px; }
