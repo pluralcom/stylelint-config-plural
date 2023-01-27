@@ -7,6 +7,7 @@ module.exports = {
 	extends: [
 		'stylelint-config-standard',
 		'stylelint-config-standard-scss',
+		'stylelint-8-point-grid',
 		'stylelint-config-prettier',
 	],
 	plugins: ['stylelint-high-performance-animation', 'stylelint-images', 'stylelint-order'],
@@ -26,6 +27,15 @@ module.exports = {
 		// 'number-max-precision': null,
 		/** properties order */
 		'order/properties-order': propertyOrder,
+		// /** 8 point grid system - 4 point base and 8 point main grid system */
+		'plugin/8-point-grid': {
+			/** base grid point 4 so we can use 4 in certain scenarios and 8 in most. */
+			base: 4,
+			/** special case allow for 1 and 2 points in px and rem, units can be enabled/disabled using other rules */
+			allowlist: ['1px', '2px', '0.0625rem', '0.125rem'],
+			/** custom properties */
+			customProperties: ['size'],
+		},
 		/** now low performance animation properties */
 		'plugin/no-low-performance-animation-properties': true,
 		/** eg: composes - css modules */

@@ -2,6 +2,10 @@ a {
   top: .2em;
 }
 
+.size {
+  width: 10px;
+}
+
 @custom-media --FOO;
 
 :root { --FOO: 1px; }

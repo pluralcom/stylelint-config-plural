@@ -20,7 +20,7 @@
 .selector-a,
 .selector-b:not(:first-child) {
   top: calc(100% - 2rem);
-  padding: 10px !important;
+  padding: 8px !important;
 }
 
 .selector-x { width: 10%; }
@@ -49,8 +49,8 @@
   screen and (min-resolution: 2dppx) {
   .selector {
     height: 10rem;
-    margin: 10px;
-    margin-bottom: 5px;
+    margin: 8px;
+    margin-bottom: 4px;
     background-image:
       repeating-linear-gradient(
         -45deg,
