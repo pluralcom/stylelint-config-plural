@@ -20,8 +20,8 @@ To see the rules that this config uses, please read the [config itself](./index.
 
 <!-- prettier-ignore -->
 ```css
-@import "x";
-@import "y";
+@import "./x";
+@import "./y";
 
 /**
  * Multi-line comment
@@ -91,7 +91,7 @@ To see the rules that this config uses, please read the [config itself](./index.
   /* Flush nested single line comment */
   .selector::after {
     content: "→";
-    background-image: url("x.svg");
+    background-image: url("./x.svg");
   }
 }
 

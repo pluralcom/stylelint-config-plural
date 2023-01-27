@@ -1,5 +1,4 @@
-@import "x";
-@import "y";
+@import "./x";
 
 /**
  * Multi-line comment
@@ -69,7 +68,7 @@
   /* Flush nested single line comment */
   .selector::after {
     content: "→";
-    background-image: url("x.svg");
+    background-image: url("./x.svg");
   }
 }
 

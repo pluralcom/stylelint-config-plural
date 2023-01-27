@@ -9,7 +9,7 @@ module.exports = {
 		'stylelint-config-standard-scss',
 		'stylelint-config-prettier',
 	],
-	plugins: ['stylelint-order'],
+	plugins: ['stylelint-high-performance-animation', 'stylelint-images', 'stylelint-order'],
 	/**
 	 * Global Rules
 	 *
@@ -20,11 +20,15 @@ module.exports = {
 		/* CSS */
 		/** use long to match JS */
 		'color-hex-length': 'long',
+		/** images */
+		'images/broken': true,
+		// /** allow us to go as precise as needed */
+		// 'number-max-precision': null,
 		/** properties order */
 		'order/properties-order': propertyOrder,
-		/** allow us to go as precise as needed */
-		'number-max-precision': null,
-		/** eg: composes - scss */
+		/** now low performance animation properties */
+		'plugin/no-low-performance-animation-properties': true,
+		/** eg: composes - css modules */
 		'property-no-unknown': [
 			true,
 			{
