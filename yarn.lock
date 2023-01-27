@@ -6373,13 +6373,6 @@ stylelint-images@^2.0.1:
     axios "^0.19.0"
     lodash "^4.17.4"
 
-stylelint-no-px@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/stylelint-no-px/-/stylelint-no-px-1.0.1.tgz#4d137c60a02c60514a958b43d3bb41805405a3ca"
-  integrity sha512-33+Gd5WFeSvEiOV8IwWMVgjzYieFg/Q4ETKeZkahSYl2V7+WMtgNT32IYYEspN402ZJv16bOciwEnG1GY2qrPA==
-  dependencies:
-    postcss-value-parser "^3.3.0 || ^4.0.2"
-
 stylelint-order@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-6.0.1.tgz#a43349d99b38dd4e00bc9c5045794f2a73754e51"
@@ -6387,6 +6380,13 @@ stylelint-order@^6.0.1:
   dependencies:
     postcss "^8.4.20"
     postcss-sorting "^8.0.1"
+
+stylelint-rem-over-px@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/stylelint-rem-over-px/-/stylelint-rem-over-px-0.0.2.tgz#699241f9b109ac2d6bd4b52d6ac6d40779bc129b"
+  integrity sha512-RDL7Y89h7Km4QIyAnPxE+ARAqm3NnHuIR4krtjA7CTBr5H0zHgOW1T4d9hBFBwNujKCtIAsSfkHwVftmv5fkdQ==
+  dependencies:
+    postcss-value-parser "^3.3.0 || ^4.0.2"
 
 stylelint-scss@^4.0.0:
   version "4.3.0"

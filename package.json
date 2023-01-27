@@ -81,8 +81,8 @@
     "stylelint-config-standard-scss": "^6.1.0",
     "stylelint-high-performance-animation": "^1.7.0",
     "stylelint-images": "^2.0.1",
-    "stylelint-no-px": "^1.0.1",
-    "stylelint-order": "^6.0.1"
+    "stylelint-order": "^6.0.1",
+    "stylelint-rem-over-px": "^0.0.2"
   },
   "devDependencies": {
     "@stylelint/prettier-config": "^2.0.0",
@@ -110,6 +110,7 @@
     "stylelint-high-performance-animation": ">=1",
     "stylelint-images": ">=2",
     "stylelint-no-unresolved-module": ">=2",
-    "stylelint-order": ">=6"
+    "stylelint-order": ">=6",
+    "stylelint-rem-over-px": ">=0"
   }
 }

@@ -46,7 +46,7 @@ describe('css', () => {
 
 		it('correct warning text', () => {
 			expect(result.results[0].warnings.map((w) => w.text)).toEqual([
-				'Use rem instead of px (meowtec/no-px)',
+				'Expected px unit in "width: 10px" to be rem. (rem-over-px/rem-over-px)',
 				'Expected "color" to come before "background-color" (order/properties-order)',
 				'Invalid `width: 10px`. Pixel values should be divisible by 4. (plugin/8-point-grid)',
 				'Expected custom media query name "--FOO" to be kebab-case',
@@ -59,7 +59,7 @@ describe('css', () => {
 
 		it('correct rule flagged', () => {
 			expect(result.results[0].warnings.map((w) => w.rule)).toEqual([
-				'meowtec/no-px',
+				'rem-over-px/rem-over-px',
 				'order/properties-order',
 				'plugin/8-point-grid',
 				'custom-media-pattern',
@@ -126,7 +126,7 @@ describe('scss', () => {
 
 		it('correct warning text', () => {
 			expect(result.results[0].warnings.map((w) => w.text)).toEqual([
-				'Use rem instead of px (meowtec/no-px)',
+				'Expected px unit in "width: 10px" to be rem. (rem-over-px/rem-over-px)',
 				'Expected "color" to come before "background-color" (order/properties-order)',
 				'Invalid `width: 10px`. Pixel values should be divisible by 4. (plugin/8-point-grid)',
 				'Invalid `width: 0.1rem`. Rem values should be divisible by 0.25. (plugin/8-point-grid)',
@@ -141,7 +141,7 @@ describe('scss', () => {
 
 		it('correct rule flagged', () => {
 			expect(result.results[0].warnings.map((w) => w.rule)).toEqual([
-				'meowtec/no-px',
+				'rem-over-px/rem-over-px',
 				'order/properties-order',
 				'plugin/8-point-grid',
 				'plugin/8-point-grid',

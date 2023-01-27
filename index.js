@@ -13,7 +13,7 @@ module.exports = {
 	plugins: [
 		'stylelint-high-performance-animation',
 		'stylelint-images',
-		'stylelint-no-px',
+		'stylelint-rem-over-px',
 		'stylelint-order',
 	],
 	/**
@@ -31,7 +31,13 @@ module.exports = {
 		// /** allow us to go as precise as needed */
 		// 'number-max-precision': null,
 		/** no px - enforce rem */
-		'meowtec/no-px': [true, { ignore: ['1px'], ignoreFunctions: ['rem'] }],
+		'rem-over-px/rem-over-px': [
+			true,
+			{
+				ignore: ['1px'],
+				ignoreFunctions: ['rem'],
+			},
+		],
 		/** properties order */
 		'order/properties-order': propertyOrder,
 		// /** 8 point grid system - 4 point base and 8 point main grid system */
