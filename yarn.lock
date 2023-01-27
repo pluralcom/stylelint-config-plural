@@ -5267,7 +5267,7 @@ postcss-syntax@^0.36.2:
   resolved "https://registry.yarnpkg.com/postcss-syntax/-/postcss-syntax-0.36.2.tgz#f08578c7d95834574e5593a82dfbfa8afae3b51c"
   integrity sha512-nBRg/i7E3SOHWxF3PpF5WnJM/jQ1YpY9000OaVXlAQj6Zp/kIqJxEDWIZ67tAd7NLuk7zqN4yqe9nc0oNAOs1w==
 
-postcss-value-parser@^4.1.0, postcss-value-parser@^4.2.0:
+"postcss-value-parser@^3.3.0 || ^4.0.2", postcss-value-parser@^4.1.0, postcss-value-parser@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
@@ -6372,6 +6372,13 @@ stylelint-images@^2.0.1:
   dependencies:
     axios "^0.19.0"
     lodash "^4.17.4"
+
+stylelint-no-px@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/stylelint-no-px/-/stylelint-no-px-1.0.1.tgz#4d137c60a02c60514a958b43d3bb41805405a3ca"
+  integrity sha512-33+Gd5WFeSvEiOV8IwWMVgjzYieFg/Q4ETKeZkahSYl2V7+WMtgNT32IYYEspN402ZJv16bOciwEnG1GY2qrPA==
+  dependencies:
+    postcss-value-parser "^3.3.0 || ^4.0.2"
 
 stylelint-order@^6.0.1:
   version "6.0.1"

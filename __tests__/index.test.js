@@ -41,11 +41,12 @@ describe('css', () => {
 		});
 
 		it('flags warnings', () => {
-			expect(result.results[0].warnings).toHaveLength(7);
+			expect(result.results[0].warnings).toHaveLength(8);
 		});
 
 		it('correct warning text', () => {
 			expect(result.results[0].warnings.map((w) => w.text)).toEqual([
+				'Use rem instead of px (meowtec/no-px)',
 				'Expected "color" to come before "background-color" (order/properties-order)',
 				'Invalid `width: 10px`. Pixel values should be divisible by 4. (plugin/8-point-grid)',
 				'Expected custom media query name "--FOO" to be kebab-case',
@@ -58,6 +59,7 @@ describe('css', () => {
 
 		it('correct rule flagged', () => {
 			expect(result.results[0].warnings.map((w) => w.rule)).toEqual([
+				'meowtec/no-px',
 				'order/properties-order',
 				'plugin/8-point-grid',
 				'custom-media-pattern',
@@ -73,7 +75,7 @@ describe('css', () => {
 		});
 
 		it('correct line number', () => {
-			expect(result.results[0].warnings[0].line).toBe(21);
+			expect(result.results[0].warnings[0].line).toBe(6);
 		});
 
 		it('correct column number', () => {
@@ -119,11 +121,12 @@ describe('scss', () => {
 		});
 
 		it('flags warnings', () => {
-			expect(result.results[0].warnings).toHaveLength(9);
+			expect(result.results[0].warnings).toHaveLength(10);
 		});
 
 		it('correct warning text', () => {
 			expect(result.results[0].warnings.map((w) => w.text)).toEqual([
+				'Use rem instead of px (meowtec/no-px)',
 				'Expected "color" to come before "background-color" (order/properties-order)',
 				'Invalid `width: 10px`. Pixel values should be divisible by 4. (plugin/8-point-grid)',
 				'Invalid `width: 0.1rem`. Rem values should be divisible by 0.25. (plugin/8-point-grid)',
@@ -138,6 +141,7 @@ describe('scss', () => {
 
 		it('correct rule flagged', () => {
 			expect(result.results[0].warnings.map((w) => w.rule)).toEqual([
+				'meowtec/no-px',
 				'order/properties-order',
 				'plugin/8-point-grid',
 				'plugin/8-point-grid',
@@ -155,7 +159,7 @@ describe('scss', () => {
 		});
 
 		it('correct line number', () => {
-			expect(result.results[0].warnings[0].line).toBe(31);
+			expect(result.results[0].warnings[0].line).toBe(6);
 		});
 
 		it('correct column number', () => {

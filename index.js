@@ -10,7 +10,12 @@ module.exports = {
 		'stylelint-8-point-grid',
 		'stylelint-config-prettier',
 	],
-	plugins: ['stylelint-high-performance-animation', 'stylelint-images', 'stylelint-order'],
+	plugins: [
+		'stylelint-high-performance-animation',
+		'stylelint-images',
+		'stylelint-no-px',
+		'stylelint-order',
+	],
 	/**
 	 * Global Rules
 	 *
@@ -25,6 +30,8 @@ module.exports = {
 		'images/broken': true,
 		// /** allow us to go as precise as needed */
 		// 'number-max-precision': null,
+		/** no px - enforce rem */
+		'meowtec/no-px': [true, { ignore: ['1px'], ignoreFunctions: ['rem'] }],
 		/** properties order */
 		'order/properties-order': propertyOrder,
 		// /** 8 point grid system - 4 point base and 8 point main grid system */
