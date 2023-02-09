@@ -34,6 +34,7 @@ module.exports = {
 		'rem-over-px/rem-over-px': [
 			true,
 			{
+        fontSize: 16,
 				ignore: ['1px'],
 				ignoreFunctions: ['rem'],
 			},
