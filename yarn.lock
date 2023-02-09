@@ -6440,10 +6440,10 @@ stylelint-order@^6.0.1:
     postcss "^8.4.20"
     postcss-sorting "^8.0.1"
 
-stylelint-rem-over-px@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/stylelint-rem-over-px/-/stylelint-rem-over-px-0.0.2.tgz#699241f9b109ac2d6bd4b52d6ac6d40779bc129b"
-  integrity sha512-RDL7Y89h7Km4QIyAnPxE+ARAqm3NnHuIR4krtjA7CTBr5H0zHgOW1T4d9hBFBwNujKCtIAsSfkHwVftmv5fkdQ==
+stylelint-rem-over-px@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/stylelint-rem-over-px/-/stylelint-rem-over-px-0.0.4.tgz#a282927f09dd98cb3d9baaa43b1e9f6d5437facf"
+  integrity sha512-XNiJGjGeqvYfwu2DJvwy40urWbjkU/8iA2jF0Ax1JO+VJJyY09XlyLnGnTEiW74gOrMbdAmLN3XTklakNJnmGw==
   dependencies:
     postcss-value-parser "^3.3.0 || ^4.0.2"
 
