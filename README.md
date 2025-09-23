@@ -195,4 +195,4 @@ You can make sure this module lints with itself using `npm run lint`.
 
 <hr>
 
-This Package is being maintained by [plural](https://plural.com)
+This Package is being maintained by [plural.com](https://plural.com)
